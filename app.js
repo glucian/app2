@@ -205,11 +205,11 @@ function carregaListaDespesas(despesas = Array(), filtro = false) {
     })
 
     var soma = 0
+
     despesas.forEach(function(d) {
 
         soma = parseFloat(d.valor) + soma
 
-        console.log(soma);
     })
 
         let linha = listaDespesas.insertRow()
