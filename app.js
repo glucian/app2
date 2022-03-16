@@ -203,7 +203,22 @@ function carregaListaDespesas(despesas = Array(), filtro = false) {
         linha.insertCell(4).append(btn)
 
     })
-    
+
+    var soma = 0
+    despesas.forEach(function(d) {
+
+        soma = parseFloat(d.valor) + soma
+
+        console.log(soma);
+    })
+
+        let linha = listaDespesas.insertRow()
+
+        //criar as colunas
+        linha.insertCell(0).innerHTML = '<strong>Total Gasto</strong>'
+        linha.insertCell(1).innerHTML = ''
+        linha.insertCell(2).innerHTML = ''
+        linha.insertCell(3).innerHTML = soma
 }
 
 function pesquisarDespesa() {
